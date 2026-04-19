@@ -1,0 +1,66 @@
+{
+  "schema_version": "0.4",
+  "document_id": "hfa_runtime_example_v0_4",
+  "title": "Human Fracture Analysis Runtime Example",
+  "status": "active_example",
+  "system_name": "Human Fracture Analysis",
+  "system_type": "sta_structural_diagnostic_layer",
+  "purpose": "Shows how a human narrative is converted into signals, evaluated by the constraint engine, and explained through response templates.",
+  "runtime_context": {
+    "stack_reference": "hfa_pinned_versions_spec_v0_4.json",
+    "active_components": {
+      "canon": "hfa_canon_light_v0_2_FE01_FE12.json",
+      "signal_registry": "hfa_signal_registry_v0_2.json",
+      "signal_definitions": "hfa_signal_definitions_v0_3.json",
+      "diagnostic_cards": "hfa_cards_light_v0_2_FD01_FD12.json",
+      "constraint_engine": "hfa_constraint_engine_v0_3.json",
+      "response_templates": "hfa_explanatory_response_templates_v0_4.json"
+    }
+  },
+  "input_case": {
+    "case_id": "HFA-RUNTIME-EX-01",
+    "user_narrative": "She wants to leave and I keep telling her she owes me another chance. I also want the children to know who broke the family. I am considering delaying the housing paperwork because she should feel what she has done.",
+    "input_mode": "free_text_narrative",
+    "language": "en"
+  },
+  "constraint_engine_phase": {
+    "final_assessment": {
+      "structural_risk_level": "critical",
+      "dignity_assessment": "failing",
+      "child_impact_assessment": "critical risk",
+      "narrative_bias_warning": "strong",
+      "collapse_containment_priority": false,
+      "self_annihilation_risk": "none"
+    }
+  },
+  "response_template_phase": {
+    "filled_output": {
+      "summary_judgment": "This is a critical structural breach because children are being pulled into adult rupture.",
+      "why_flagged": "The narrative was flagged because it combines coercive pressure, child leverage, administrative punishment logic, and one-sided blame framing.",
+      "signals_detected": [
+        "FES-01",
+        "FES-04",
+        "FES-07",
+        "FES-11"
+      ],
+      "axioms_implicated": [
+        "FE01",
+        "FE04",
+        "FE06",
+        "FE07",
+        "FE11",
+        "FE12"
+      ],
+      "dignity_assessment": "failing",
+      "child_impact_assessment": "critical risk",
+      "narrative_bias_warning": "strong",
+      "recommended_higher_response": [
+        "Stop using children as carriers of adult blame immediately.",
+        "Stop treating practical process as a punishment channel.",
+        "Acknowledge the other person's freedom instead of trying to override it by pressure.",
+        "Reframe the narrative with self-implication and structural complexity."
+      ]
+    }
+  },
+  "created_utc": "2026-04-18T03:38:44+00:00"
+}

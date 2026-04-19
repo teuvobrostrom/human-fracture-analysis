@@ -1,0 +1,94 @@
+{
+  "schema_version": "0.4",
+  "document_id": "hfa_pinned_versions_spec_v0_4",
+  "title": "Human Fracture Analysis Pinned Versions Specification",
+  "status": "active",
+  "system_name": "Human Fracture Analysis",
+  "system_type": "sta_structural_diagnostic_layer",
+  "purpose": "Defines the exact set of compatible file versions that together form a valid and executable Human Fracture Analysis structural diagnostic stack.",
+  "active_stack": {
+    "canon": {
+      "file": "hfa_canon_light_v0_2_FE01_FE12.json",
+      "version": "v0_2",
+      "ids": "FE01-FE12"
+    },
+    "signal_registry": {
+      "file": "hfa_signal_registry_v0_2.json",
+      "version": "v0_2"
+    },
+    "signal_definitions": {
+      "file": "hfa_signal_definitions_v0_3.json",
+      "version": "v0_3"
+    },
+    "diagnostic_cards": {
+      "file": "hfa_cards_light_v0_2_FD01_FD12.json",
+      "version": "v0_2",
+      "ids": "FD01-FD12"
+    },
+    "constraint_engine": {
+      "file": "hfa_constraint_engine_v0_3.json",
+      "version": "v0_3"
+    },
+    "runtime_example": {
+      "file": "hfa_runtime_example_v0_4_full.json",
+      "version": "v0_4"
+    },
+    "response_templates": {
+      "file": "hfa_explanatory_response_templates_v0_4.json",
+      "version": "v0_4"
+    },
+    "test_cases": {
+      "file": "hfa_test_cases_v0_3.json",
+      "version": "v0_3"
+    },
+    "canonical_id_policy": {
+      "file": "hfa_canonical_id_policy_v0_4.json",
+      "version": "v0_4"
+    }
+  },
+  "compatibility_rules": [
+    {
+      "rule_id": "HFAPIN-01",
+      "description": "All signal IDs referenced in signal_definitions must exist in signal_registry."
+    },
+    {
+      "rule_id": "HFAPIN-02",
+      "description": "All signals used in diagnostic_cards must exist in signal_definitions."
+    },
+    {
+      "rule_id": "HFAPIN-03",
+      "description": "Constraint engine may only reference defined signal IDs and valid axiom IDs."
+    },
+    {
+      "rule_id": "HFAPIN-04",
+      "description": "Response templates must align with fields defined in constraint engine output."
+    },
+    {
+      "rule_id": "HFAPIN-05",
+      "description": "Test cases must be executable using current signal_definitions and constraint_engine."
+    }
+  ],
+  "load_order": [
+    "canonical_id_policy",
+    "canon",
+    "signal_registry",
+    "signal_definitions",
+    "diagnostic_cards",
+    "constraint_engine",
+    "response_templates",
+    "runtime_example",
+    "test_cases"
+  ],
+  "integrity_expectations": {
+    "strict_mode": true,
+    "missing_signal_behavior": "error",
+    "unknown_id_behavior": "reject",
+    "partial_load_allowed": false
+  },
+  "versioning_notes": [
+    "This pinned stack represents the first operational Human Fracture Analysis system.",
+    "Minor upgrades may extend signals, cards, or test cases without breaking compatibility.",
+    "If any active file is replaced by a later full version, the pinned spec must be updated accordingly."
+  ],
+  "created_utc": "2026-04-18T03:41:25+00:00"
+}

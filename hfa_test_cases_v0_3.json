@@ -1,0 +1,218 @@
+{
+  "schema_version": "0.3",
+  "document_id": "hfa_test_cases_v0_3",
+  "title": "Human Fracture Analysis Test Cases",
+  "status": "draft",
+  "system_name": "Human Fracture Analysis",
+  "purpose": "Provides realistic narrative test cases to evaluate signal detection, escalation logic, and explanatory coherence.",
+  "case_schema": {
+    "id": "string",
+    "title": "string",
+    "narrative": "string",
+    "expected_signals": [
+      "string"
+    ],
+    "expected_output": {
+      "dignity_assessment": "string",
+      "child_impact_assessment": "string",
+      "narrative_bias_warning": "string",
+      "collapse_containment_priority": "boolean",
+      "structural_risk_level": "string"
+    }
+  },
+  "cases": [
+    {
+      "id": "FET-01",
+      "title": "Dignified separation with residual goodwill",
+      "narrative": "We are separating, but we both want the children to feel safe. I help with the move and she helps me with the paperwork. We do not insult each other, and we try to keep adult pain away from the kids.",
+      "expected_signals": [
+        "FES-09",
+        "FES-12"
+      ],
+      "expected_output": {
+        "dignity_assessment": "holding",
+        "child_impact_assessment": "low concern",
+        "narrative_bias_warning": "none",
+        "collapse_containment_priority": false,
+        "structural_risk_level": "low"
+      }
+    },
+    {
+      "id": "FET-02",
+      "title": "Children used as loyalty carriers",
+      "narrative": "I told the children who really destroyed this family, because they deserve to know the truth. I need them to understand what their mother has done.",
+      "expected_signals": [
+        "FES-04",
+        "FES-11"
+      ],
+      "expected_output": {
+        "dignity_assessment": "strained",
+        "child_impact_assessment": "critical risk",
+        "narrative_bias_warning": "strong",
+        "collapse_containment_priority": false,
+        "structural_risk_level": "critical"
+      }
+    },
+    {
+      "id": "FET-03",
+      "title": "Financial pressure to prevent departure",
+      "narrative": "If she leaves, I will stop paying anything extra and make sure she realizes how impossible life is without me. Then maybe she will understand what she is giving up.",
+      "expected_signals": [
+        "FES-01",
+        "FES-07"
+      ],
+      "expected_output": {
+        "dignity_assessment": "failing",
+        "child_impact_assessment": "moderate concern",
+        "narrative_bias_warning": "possible",
+        "collapse_containment_priority": false,
+        "structural_risk_level": "critical"
+      }
+    },
+    {
+      "id": "FET-04",
+      "title": "Acute collapse and self-erasing guilt",
+      "narrative": "I ruined everything and I do not even feel worthy of being near my own family. I honestly do not know if I want to survive this.",
+      "expected_signals": [
+        "FES-06",
+        "FES-10"
+      ],
+      "expected_output": {
+        "dignity_assessment": "strained",
+        "child_impact_assessment": "moderate concern",
+        "narrative_bias_warning": "possible",
+        "collapse_containment_priority": true,
+        "structural_risk_level": "critical"
+      }
+    },
+    {
+      "id": "FET-05",
+      "title": "Obsessive interrogation about a third party",
+      "narrative": "I keep asking whether there is another man. I know the answer will destroy me, but she has to tell me every detail or I will never let this go.",
+      "expected_signals": [
+        "FES-08",
+        "FES-01"
+      ],
+      "expected_output": {
+        "dignity_assessment": "failing",
+        "child_impact_assessment": "low concern",
+        "narrative_bias_warning": "possible",
+        "collapse_containment_priority": false,
+        "structural_risk_level": "high"
+      }
+    },
+    {
+      "id": "FET-06",
+      "title": "Bitterness hardening into identity",
+      "narrative": "I am done being decent. She took my life, and I want her to feel that loss for the rest of her days. That is the only justice left.",
+      "expected_signals": [
+        "FES-03",
+        "FES-02"
+      ],
+      "expected_output": {
+        "dignity_assessment": "failing",
+        "child_impact_assessment": "moderate concern",
+        "narrative_bias_warning": "possible",
+        "collapse_containment_priority": false,
+        "structural_risk_level": "high"
+      }
+    },
+    {
+      "id": "FET-07",
+      "title": "Short shock phase with later return to children",
+      "narrative": "For a few weeks after the divorce talk, I could barely think beyond survival. But now I am rebuilding routines with the children and planning around their needs.",
+      "expected_signals": [
+        "FES-05",
+        "FES-12"
+      ],
+      "expected_output": {
+        "dignity_assessment": "holding",
+        "child_impact_assessment": "moderate concern",
+        "narrative_bias_warning": "none",
+        "collapse_containment_priority": false,
+        "structural_risk_level": "moderate"
+      }
+    },
+    {
+      "id": "FET-08",
+      "title": "Administrative cruelty hidden in practical language",
+      "narrative": "I am not angry. I just see no reason to answer her emails quickly, sign the papers soon, or make this easier than necessary.",
+      "expected_signals": [
+        "FES-07"
+      ],
+      "expected_output": {
+        "dignity_assessment": "strained",
+        "child_impact_assessment": "moderate concern",
+        "narrative_bias_warning": "possible",
+        "collapse_containment_priority": false,
+        "structural_risk_level": "high"
+      }
+    },
+    {
+      "id": "FET-09",
+      "title": "Continued belonging without possession",
+      "narrative": "We are no longer a couple, but we are still a family in another form. I do not own her, yet I will always remain responsible toward the children and respectful toward her.",
+      "expected_signals": [
+        "FES-12"
+      ],
+      "expected_output": {
+        "dignity_assessment": "holding",
+        "child_impact_assessment": "low concern",
+        "narrative_bias_warning": "none",
+        "collapse_containment_priority": false,
+        "structural_risk_level": "low"
+      }
+    },
+    {
+      "id": "FET-10",
+      "title": "Villain narrative with no self-implication",
+      "narrative": "This whole thing is entirely her fault. I did absolutely nothing wrong, and the only problem here is her character.",
+      "expected_signals": [
+        "FES-11"
+      ],
+      "expected_output": {
+        "dignity_assessment": "strained",
+        "child_impact_assessment": "low concern",
+        "narrative_bias_warning": "strong",
+        "collapse_containment_priority": false,
+        "structural_risk_level": "moderate"
+      }
+    },
+    {
+      "id": "FET-11",
+      "title": "Strategic niceness masking control",
+      "narrative": "I am being incredibly kind and generous so she can see what she is losing. Sooner or later she will realize she belongs here with me.",
+      "expected_signals": [
+        "FES-09",
+        "FES-01"
+      ],
+      "expected_output": {
+        "dignity_assessment": "strained",
+        "child_impact_assessment": "low concern",
+        "narrative_bias_warning": "possible",
+        "collapse_containment_priority": false,
+        "structural_risk_level": "high"
+      }
+    },
+    {
+      "id": "FET-12",
+      "title": "Severe cluster: coercion, child leverage, degrading speech",
+      "narrative": "She is a liar and a coward. I will make sure the children know it, and I will not make the move or the legal process easy for her.",
+      "expected_signals": [
+        "FES-02",
+        "FES-04",
+        "FES-07",
+        "FES-11"
+      ],
+      "expected_output": {
+        "dignity_assessment": "failing",
+        "child_impact_assessment": "critical risk",
+        "narrative_bias_warning": "strong",
+        "collapse_containment_priority": false,
+        "structural_risk_level": "critical"
+      }
+    }
+  ],
+  "created_utc": "2026-04-17T17:08:43+00:00",
+  "system_type": "sta_structural_diagnostic_layer"
+}

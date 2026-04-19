@@ -1,0 +1,129 @@
+{
+  "schema_version": "0.3",
+  "document_id": "hfa_constraint_engine_v0_3",
+  "title": "Human Fracture Analysis Constraint and Scoring Logic",
+  "status": "draft",
+  "system_name": "Human Fracture Analysis",
+  "system_type": "sta_structural_diagnostic_layer",
+  "purpose": "Defines how multiple structural signals are aggregated into an overall structural risk assessment.",
+  "severity_points": {
+    "low": 1,
+    "moderate": 2,
+    "high": 3,
+    "critical": 4
+  },
+  "signal_polarity": {
+    "protective_signals": [
+      "FES-09",
+      "FES-12"
+    ],
+    "risk_signals": [
+      "FES-01",
+      "FES-02",
+      "FES-03",
+      "FES-04",
+      "FES-05",
+      "FES-06",
+      "FES-07",
+      "FES-08",
+      "FES-10",
+      "FES-11"
+    ]
+  },
+  "combination_rules": [
+    {
+      "id": "FEC-01",
+      "name": "Child Harm Escalation",
+      "logic": "If FES-04 is present, minimum overall structural_risk_level = high. If FES-04 co-occurs with any of FES-02, FES-07, or FES-11, overall structural_risk_level = critical."
+    },
+    {
+      "id": "FEC-02",
+      "name": "Collapse Before Moralization",
+      "logic": "If FES-10 is present, system must output collapse_containment_priority = true. Structural evaluation may proceed, but stabilization has priority."
+    },
+    {
+      "id": "FEC-03",
+      "name": "Coercion Cluster",
+      "logic": "If FES-01 co-occurs with FES-07 or FES-08, raise dignity_assessment to failing unless strong protective evidence exists."
+    },
+    {
+      "id": "FEC-04",
+      "name": "Bitterness Operationalized",
+      "logic": "If FES-03 co-occurs with FES-02, FES-04, or FES-07, treat bitterness as operational and increase overall risk by one level."
+    },
+    {
+      "id": "FEC-05",
+      "name": "Narrative Bias Warning",
+      "logic": "If FES-11 is present without self-accountability markers, output narrative_bias_warning = strong."
+    },
+    {
+      "id": "FEC-06",
+      "name": "Protective Signal Moderation",
+      "logic": "Protective signals may soften explanation tone but cannot downgrade critical child or collapse risk."
+    },
+    {
+      "id": "FEC-07",
+      "name": "Self-Erasure Escalation",
+      "logic": "If FES-06 co-occurs with FES-10, output self_annihilation_risk = severe and prioritize containment."
+    }
+  ],
+  "scoring_algorithm": {
+    "step_1": "Assign points to each detected risk signal.",
+    "step_2": "Do not subtract protective signals mechanically.",
+    "step_3": "Apply combination rules.",
+    "step_4": "Generate overall classification from pattern.",
+    "step_5": "Generate structured assessment fields."
+  },
+  "baseline_thresholds": [
+    {
+      "overall_risk_level": "low",
+      "condition": "One isolated low/moderate signal."
+    },
+    {
+      "overall_risk_level": "moderate",
+      "condition": "One high or two moderate signals."
+    },
+    {
+      "overall_risk_level": "high",
+      "condition": "Multiple high signals or child/coercion patterns."
+    },
+    {
+      "overall_risk_level": "critical",
+      "condition": "Child leverage cluster or collapse cluster."
+    }
+  ],
+  "assessment_fields": {
+    "structural_risk_level": [
+      "low",
+      "moderate",
+      "high",
+      "critical"
+    ],
+    "dignity_assessment": [
+      "holding",
+      "strained",
+      "failing"
+    ],
+    "child_impact_assessment": [
+      "low concern",
+      "moderate concern",
+      "high risk",
+      "critical risk"
+    ],
+    "narrative_bias_warning": [
+      "none",
+      "possible",
+      "strong"
+    ],
+    "collapse_containment_priority": [
+      true,
+      false
+    ],
+    "self_annihilation_risk": [
+      "none",
+      "elevated",
+      "severe"
+    ]
+  },
+  "created_utc": "2026-04-17T17:08:43+00:00"
+}

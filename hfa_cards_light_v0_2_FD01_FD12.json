@@ -1,0 +1,275 @@
+{
+  "schema_version": "0.2",
+  "document_id": "hfa_cards_light_v0_2_FD01_FD12",
+  "title": "Human Fracture Analysis Diagnostic Cards Light",
+  "status": "draft",
+  "system_type": "sta_structural_diagnostic_layer",
+  "card_schema": {
+    "id": "string",
+    "title": "string",
+    "situation": "string",
+    "structural_failure_mode": [
+      "string"
+    ],
+    "signal_bindings": [
+      "string"
+    ],
+    "canon_bindings": [
+      "string"
+    ],
+    "higher_response": [
+      "string"
+    ],
+    "why_flagged": "string"
+  },
+  "cards": [
+    {
+      "id": "FD01",
+      "title": "Refusal to Accept the Other's Freedom",
+      "situation": "One party cannot absorb the separation and tries to negotiate against freedom itself.",
+      "structural_failure_mode": [
+        "coercive retention",
+        "denial as domination"
+      ],
+      "signal_bindings": [
+        "FES-01"
+      ],
+      "canon_bindings": [
+        "FE01",
+        "FE06"
+      ],
+      "higher_response": [
+        "acknowledge the decision",
+        "stop treating freedom as reversible"
+      ],
+      "why_flagged": "Flag triggered when grief transitions into structural captivity logic."
+    },
+    {
+      "id": "FD02",
+      "title": "Bitterness as Identity",
+      "situation": "A person starts to organize identity around having been wronged.",
+      "structural_failure_mode": [
+        "resentment identity",
+        "memory poisoning"
+      ],
+      "signal_bindings": [
+        "FES-03"
+      ],
+      "canon_bindings": [
+        "FE03",
+        "FE12"
+      ],
+      "higher_response": [
+        "separate pain from contempt",
+        "retain truthful grief without revenge identity"
+      ],
+      "why_flagged": "Flag triggered when suffering hardens into a long-term structural toxin."
+    },
+    {
+      "id": "FD03",
+      "title": "Children Turned Into Leverage",
+      "situation": "Children are used as messengers, proof, allies, shields, or compensation.",
+      "structural_failure_mode": [
+        "child instrumentalization",
+        "loyalty split engineering"
+      ],
+      "signal_bindings": [
+        "FES-04"
+      ],
+      "canon_bindings": [
+        "FE04",
+        "FE11",
+        "FE12"
+      ],
+      "higher_response": [
+        "remove children from adult conflict",
+        "protect continuity and symbolic safety"
+      ],
+      "why_flagged": "This is one of the strongest structural breach patterns in family rupture."
+    },
+    {
+      "id": "FD04",
+      "title": "Temporary Parental Eclipse",
+      "situation": "Shock narrows consciousness so much that children disappear from planning.",
+      "structural_failure_mode": [
+        "collapse of parental orientation"
+      ],
+      "signal_bindings": [
+        "FES-05"
+      ],
+      "canon_bindings": [
+        "FE04",
+        "FE08"
+      ],
+      "higher_response": [
+        "stabilize first",
+        "then deliberately rebuild child-oriented thinking"
+      ],
+      "why_flagged": "Not every eclipse is malice, but the system flags prolonged drift away from child continuity."
+    },
+    {
+      "id": "FD05",
+      "title": "Self-Erasure Through Guilt",
+      "situation": "A person begins taking responsibility but slides into worthlessness or death-thought logic.",
+      "structural_failure_mode": [
+        "self-annihilating guilt",
+        "responsibility collapse into self-negation"
+      ],
+      "signal_bindings": [
+        "FES-06",
+        "FES-10"
+      ],
+      "canon_bindings": [
+        "FE05",
+        "FE08"
+      ],
+      "higher_response": [
+        "name fault concretely",
+        "reject the lie that fault removes human worth"
+      ],
+      "why_flagged": "The system must distinguish structural accountability from psychic self-destruction."
+    },
+    {
+      "id": "FD06",
+      "title": "Logistics as Punishment",
+      "situation": "Money, paperwork, housing, or schedules become delivery channels for revenge.",
+      "structural_failure_mode": [
+        "administrative cruelty",
+        "bureaucratic aggression"
+      ],
+      "signal_bindings": [
+        "FES-07"
+      ],
+      "canon_bindings": [
+        "FE06",
+        "FE07",
+        "FE12"
+      ],
+      "higher_response": [
+        "use structure to reduce damage",
+        "keep administration non-punitive"
+      ],
+      "why_flagged": "Structural diagnostics enter here: systems can hide cruelty inside practical process."
+    },
+    {
+      "id": "FD07",
+      "title": "Questions That Degrade",
+      "situation": "A person demands answers that would not heal anything but would serve injury, ego, or control.",
+      "structural_failure_mode": [
+        "intrusive interrogation",
+        "humiliating curiosity"
+      ],
+      "signal_bindings": [
+        "FES-08"
+      ],
+      "canon_bindings": [
+        "FE10",
+        "FE02"
+      ],
+      "higher_response": [
+        "accept structural limits to inquiry",
+        "distinguish closure from domination"
+      ],
+      "why_flagged": "Not every unanswered question reflects a structural deficit."
+    },
+    {
+      "id": "FD08",
+      "title": "Speech That Destroys Personhood",
+      "situation": "Language about the other becomes insulting, objectifying, or publicly degrading.",
+      "structural_failure_mode": [
+        "dehumanization",
+        "speech violence"
+      ],
+      "signal_bindings": [
+        "FES-02"
+      ],
+      "canon_bindings": [
+        "FE02",
+        "FE06",
+        "FE12"
+      ],
+      "higher_response": [
+        "restore personhood in speech",
+        "criticize conduct without degrading being"
+      ],
+      "why_flagged": "Language is treated as structural conduct, not neutral discharge."
+    },
+    {
+      "id": "FD09",
+      "title": "Residual Goodwill as Protective Factor",
+      "situation": "Practical care and easing of burden continue despite the end of romantic love.",
+      "structural_failure_mode": [],
+      "signal_bindings": [
+        "FES-09"
+      ],
+      "canon_bindings": [
+        "FE09",
+        "FE12"
+      ],
+      "higher_response": [
+        "preserve non-possessive care where possible"
+      ],
+      "why_flagged": "This is a positive signal showing reduced secondary damage."
+    },
+    {
+      "id": "FD10",
+      "title": "Narrative Absolutism",
+      "situation": "The story is told in a way that removes complexity, self-implication, or structural reality.",
+      "structural_failure_mode": [
+        "one-sided moral certainty",
+        "villain simplification"
+      ],
+      "signal_bindings": [
+        "FES-11"
+      ],
+      "canon_bindings": [
+        "FE05",
+        "FE07"
+      ],
+      "higher_response": [
+        "reintroduce complexity",
+        "examine own contribution and material conditions"
+      ],
+      "why_flagged": "The system should resist simplistic moral accounting."
+    },
+    {
+      "id": "FD11",
+      "title": "Recognition of Continued Belonging",
+      "situation": "A person begins to understand that the family bond changes form rather than disappearing entirely.",
+      "structural_failure_mode": [],
+      "signal_bindings": [
+        "FES-12"
+      ],
+      "canon_bindings": [
+        "FE11",
+        "FE04"
+      ],
+      "higher_response": [
+        "carry belonging in altered form",
+        "rebuild responsibility without possession"
+      ],
+      "why_flagged": "This is a protective continuity marker."
+    },
+    {
+      "id": "FD12",
+      "title": "Acute Collapse Requires Non-Moralizing Containment",
+      "situation": "The person shows panic, functional breakdown, or desire not to continue.",
+      "structural_failure_mode": [
+        "collapse beyond ethical processing capacity"
+      ],
+      "signal_bindings": [
+        "FES-10"
+      ],
+      "canon_bindings": [
+        "FE08",
+        "FE05"
+      ],
+      "higher_response": [
+        "stabilize first",
+        "suspend harsh moralization during acute collapse"
+      ],
+      "why_flagged": "The system must detect when containment is structurally prior to interpretation."
+    }
+  ],
+  "created_utc": "2026-04-17T16:52:14+00:00"
+}

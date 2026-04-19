@@ -1,0 +1,138 @@
+{
+  "schema_version": "0.4",
+  "document_id": "hfa_canonical_id_policy_v0_4",
+  "title": "Human Fracture Analysis Canonical ID Policy",
+  "status": "draft",
+  "system_name": "Human Fracture Analysis",
+  "system_type": "sta_structural_diagnostic_layer",
+  "purpose": "Defines canonical naming, versioning, file identity, compatibility, and repository structure rules for the Human Fracture Analysis structural diagnostic system.",
+  "repository_logic": {
+    "design_goal": "Mirror the machine-readable GitHub structure used in STA so Human Fracture Analysis can evolve incrementally while preserving canonical references.",
+    "top_level_structure": {
+      "canon": [
+        "/canon/hfa/hfa_canon_light_vX_Y_FE##_FE##.json",
+        "/canon/hfa/hfa_signal_registry_vX_Y.json",
+        "/canon/hfa/hfa_signal_definitions_vX_Y.json",
+        "/canon/hfa/hfa_cards_light_vX_Y_FD##_FD##.json"
+      ],
+      "core_runtime": [
+        "/core/runtime/hfa_runtime_example_vX_Y.json",
+        "/core/runtime/hfa_explanatory_response_templates_vX_Y.json",
+        "/core/runtime/hfa_assessment_envelope_vX_Y.json"
+      ],
+      "core_rules": [
+        "/core/rules/hfa_constraint_engine_vX_Y.json"
+      ],
+      "core_policies": [
+        "/core/policies/hfa_canonical_id_policy_vX_Y.json",
+        "/core/policies/hfa_pinned_versions_spec_vX_Y.json",
+        "/core/policies/hfa_compatibility_matrix_vX_Y.json"
+      ],
+      "core_tests": [
+        "/core/tests/hfa_test_cases_vX_Y.json"
+      ]
+    }
+  },
+  "canonical_prefixes": [
+    {
+      "prefix": "FE",
+      "object_type": "canon_axiom",
+      "format": "FE01, FE02, ...",
+      "rule": "Reserved for structural canon axioms."
+    },
+    {
+      "prefix": "FER",
+      "object_type": "root_risk",
+      "format": "FER-01, FER-02, ...",
+      "rule": "Reserved for structural root risks."
+    },
+    {
+      "prefix": "FES",
+      "object_type": "signal",
+      "format": "FES-01, FES-02, ...",
+      "rule": "Reserved for detectable structural signals."
+    },
+    {
+      "prefix": "FD",
+      "object_type": "diagnostic_card",
+      "format": "FD01, FD02, ...",
+      "rule": "Reserved for diagnostic interpretation cards."
+    },
+    {
+      "prefix": "FEC",
+      "object_type": "constraint_rule",
+      "format": "FEC-01, FEC-02, ...",
+      "rule": "Reserved for constraint logic rules."
+    },
+    {
+      "prefix": "FET",
+      "object_type": "test_case",
+      "format": "FET-01, FET-02, ...",
+      "rule": "Reserved for validation test cases."
+    },
+    {
+      "prefix": "FEP",
+      "object_type": "response_template",
+      "format": "FEP-01, FEP-02, ...",
+      "rule": "Reserved for explanatory response templates."
+    }
+  ],
+  "file_naming_rules": [
+    "All file names use lowercase snake_case with explicit version suffix.",
+    "Canon files that bundle a range of IDs must include the ID span in the filename.",
+    "Signal registry and signal definitions are separate files.",
+    "Light files are allowed when only a first operational subset exists.",
+    "No file may silently overwrite a canonical object without a version bump."
+  ],
+  "versioning_rules": {
+    "major_minor_pattern": "vX_Y",
+    "interpretation": {
+      "major": "Structural or schema-breaking change.",
+      "minor": "Compatible extension, clarification, or added entries."
+    },
+    "bump_logic": [
+      "Bump minor when adding new cards, signals, test cases, or clarifications without breaking schema.",
+      "Bump major when field names, required structure, or semantic object logic changes in a breaking way.",
+      "Pinned versions spec defines which versions are currently active together."
+    ]
+  },
+  "immutability_rules": [
+    "Canonical IDs are immutable once published.",
+    "Axiom statements may be clarified in a new version, but old IDs must remain traceable.",
+    "Deprecated objects must not be deleted without explicit deprecation metadata.",
+    "Test cases may evolve more freely, but version history should remain visible."
+  ],
+  "compatibility_rules": [
+    {
+      "rule_id": "FECOMP-01",
+      "statement": "Signal definitions version must be compatible with the signal registry version in active runtime."
+    },
+    {
+      "rule_id": "FECOMP-02",
+      "statement": "Constraint engine must only reference existing signal IDs and canon IDs."
+    },
+    {
+      "rule_id": "FECOMP-03",
+      "statement": "Response templates must only reference active assessment fields defined by the constraint engine."
+    },
+    {
+      "rule_id": "FECOMP-04",
+      "statement": "Cards must bind only to valid signal IDs and canon IDs."
+    }
+  ],
+  "canonical_reference_pattern": {
+    "format": "HFA::<file_or_object>::<version>::<id_or_span>",
+    "examples": [
+      "HFA::hfa_canon_light::v0_2::FE01-FE12",
+      "HFA::hfa_signal_definitions::v0_3::FES-04",
+      "HFA::hfa_cards_light::v0_2::FD03",
+      "HFA::hfa_constraint_engine::v0_3::FEC-01"
+    ]
+  },
+  "future_policy_files": [
+    "hfa_pinned_versions_spec_vX_Y.json",
+    "hfa_compatibility_matrix_vX_Y.json",
+    "hfa_assessment_envelope_vX_Y.json"
+  ],
+  "created_utc": "2026-04-18T03:32:31+00:00"
+}

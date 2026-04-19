@@ -1,0 +1,211 @@
+{
+  "schema_version": "0.4",
+  "document_id": "hfa_explanatory_response_templates_v0_4",
+  "title": "Human Fracture Analysis Explanatory Response Templates",
+  "status": "draft",
+  "system_name": "Human Fracture Analysis",
+  "system_type": "sta_structural_diagnostic_layer",
+  "purpose": "Defines consistent structured explanatory outputs so a system can explain structural evaluations, signal triggers, and recommended responses.",
+  "output_contract": {
+    "required_fields": [
+      "summary_judgment",
+      "why_flagged",
+      "signals_detected",
+      "axioms_implicated",
+      "dignity_assessment",
+      "child_impact_assessment",
+      "narrative_bias_warning",
+      "recommended_higher_response"
+    ],
+    "optional_fields": [
+      "collapse_containment_priority",
+      "self_annihilation_risk",
+      "protective_factors_detected",
+      "uncertainty_note"
+    ]
+  },
+  "style_rules": [
+    "Explain structural patterns, not personal worth.",
+    "Signals are indicators, not proof.",
+    "Use direct language without therapeutic vagueness.",
+    "Separate collapse from structural failure.",
+    "Acknowledge protective signals without neutralizing risk.",
+    "Do not evaluate children; evaluate adult behavior toward children."
+  ],
+  "templates": [
+    {
+      "id": "FEP-01",
+      "name": "Single Moderate Signal",
+      "use_when": "One isolated moderate signal without escalation.",
+      "template": {
+        "summary_judgment": "There is a moderate structural concern but not a full failure pattern.",
+        "why_flagged": "Triggered by {signal_name}, which may evolve into structural distortion.",
+        "signals_detected": [
+          "{signal_id}"
+        ],
+        "axioms_implicated": [
+          "{axiom_ids}"
+        ],
+        "dignity_assessment": "{dignity_assessment}",
+        "child_impact_assessment": "{child_impact_assessment}",
+        "narrative_bias_warning": "{narrative_bias_warning}",
+        "recommended_higher_response": [
+          "{higher_response_1}",
+          "{higher_response_2}"
+        ],
+        "uncertainty_note": "Indicator based on available narrative, not full case."
+      }
+    },
+    {
+      "id": "FEP-02",
+      "name": "High-Risk Dignity Failure",
+      "use_when": "Coercion, degradation, or punitive patterns detected.",
+      "template": {
+        "summary_judgment": "Structural integrity is failing due to coercive or degrading patterns.",
+        "why_flagged": "Signals {signal_names} indicate movement toward domination or punishment.",
+        "signals_detected": [
+          "{signal_ids}"
+        ],
+        "axioms_implicated": [
+          "{axiom_ids}"
+        ],
+        "dignity_assessment": "failing",
+        "child_impact_assessment": "{child_impact_assessment}",
+        "narrative_bias_warning": "{narrative_bias_warning}",
+        "recommended_higher_response": [
+          "Stop coercive or degrading conduct.",
+          "Reframe behavior in terms of responsibility, not identity attack.",
+          "{higher_response_extra}"
+        ]
+      }
+    },
+    {
+      "id": "FEP-03",
+      "name": "Child Leverage Critical",
+      "use_when": "Children are used as leverage.",
+      "template": {
+        "summary_judgment": "Critical structural breach: children are being pulled into adult conflict.",
+        "why_flagged": "Signal {signal_name} places adult conflict weight onto children.",
+        "signals_detected": [
+          "FES-04",
+          "{additional_signal_ids}"
+        ],
+        "axioms_implicated": [
+          "FE04",
+          "FE11",
+          "FE12"
+        ],
+        "dignity_assessment": "{dignity_assessment}",
+        "child_impact_assessment": "critical risk",
+        "narrative_bias_warning": "{narrative_bias_warning}",
+        "recommended_higher_response": [
+          "Remove children from conflict immediately.",
+          "Keep adult conflict processing with adults.",
+          "Rebuild stability around children."
+        ]
+      }
+    },
+    {
+      "id": "FEP-04",
+      "name": "Collapse Containment Priority",
+      "use_when": "Psychological collapse risk present.",
+      "template": {
+        "summary_judgment": "Acute collapse risk detected. Containment overrides full evaluation.",
+        "why_flagged": "Signals {signal_names} indicate breakdown beyond standard processing.",
+        "signals_detected": [
+          "{signal_ids}"
+        ],
+        "axioms_implicated": [
+          "FE05",
+          "FE08"
+        ],
+        "dignity_assessment": "{dignity_assessment}",
+        "child_impact_assessment": "{child_impact_assessment}",
+        "narrative_bias_warning": "{narrative_bias_warning}",
+        "collapse_containment_priority": true,
+        "self_annihilation_risk": "{self_annihilation_risk}",
+        "recommended_higher_response": [
+          "Stabilize before further interpretation.",
+          "Do not equate responsibility with loss of worth.",
+          "Suspend accusatory analysis."
+        ]
+      }
+    },
+    {
+      "id": "FEP-05",
+      "name": "Narrative Absolutism Correction",
+      "use_when": "One-sided narrative detected.",
+      "template": {
+        "summary_judgment": "Structural concern: narrative distortion.",
+        "why_flagged": "Narrative removes complexity and self-implication.",
+        "signals_detected": [
+          "FES-11"
+        ],
+        "axioms_implicated": [
+          "FE05",
+          "FE07"
+        ],
+        "dignity_assessment": "{dignity_assessment}",
+        "child_impact_assessment": "{child_impact_assessment}",
+        "narrative_bias_warning": "strong",
+        "recommended_higher_response": [
+          "Reintroduce complexity.",
+          "Identify own contribution.",
+          "Separate pain from certainty."
+        ]
+      }
+    },
+    {
+      "id": "FEP-06",
+      "name": "Protective Factor Acknowledgment",
+      "use_when": "Protective signals present.",
+      "template": {
+        "summary_judgment": "Protective structural factors are present.",
+        "why_flagged": "Signals {signal_names} reduce secondary damage.",
+        "signals_detected": [
+          "{signal_ids}"
+        ],
+        "axioms_implicated": [
+          "{axiom_ids}"
+        ],
+        "dignity_assessment": "{dignity_assessment}",
+        "child_impact_assessment": "{child_impact_assessment}",
+        "narrative_bias_warning": "{narrative_bias_warning}",
+        "protective_factors_detected": [
+          "{signal_names}"
+        ],
+        "recommended_higher_response": [
+          "Preserve non-coercive care.",
+          "Maintain goodwill without possession."
+        ]
+      }
+    },
+    {
+      "id": "FEP-07",
+      "name": "Administrative Cruelty Explanation",
+      "use_when": "Punitive logistics detected.",
+      "template": {
+        "summary_judgment": "Structural concern: logistics used as punishment.",
+        "why_flagged": "Administrative processes are used to control or injure.",
+        "signals_detected": [
+          "FES-07",
+          "{additional_signal_ids}"
+        ],
+        "axioms_implicated": [
+          "FE06",
+          "FE07",
+          "FE12"
+        ],
+        "dignity_assessment": "{dignity_assessment}",
+        "child_impact_assessment": "{child_impact_assessment}",
+        "narrative_bias_warning": "{narrative_bias_warning}",
+        "recommended_higher_response": [
+          "Separate logistics from punishment.",
+          "Use structure to solve reality, not harm.",
+          "{higher_response_extra}"
+        ]
+      }
+    }
+  ],
+  "created_utc": "2026-04-18T03:32:31+00:00"
+}

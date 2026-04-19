@@ -1,0 +1,299 @@
+{
+  "schema_version": "0.3",
+  "document_id": "hfa_signal_definitions_v0_3",
+  "title": "Human Fracture Analysis Signal Definitions",
+  "status": "draft",
+  "system_name": "Human Fracture Analysis",
+  "system_type": "sta_structural_diagnostic_layer",
+  "purpose": "Provides operational definitions for Human Fracture Analysis signals so that narrative detection can be evaluated consistently and explained transparently.",
+  "fields": [
+    "id",
+    "name",
+    "description",
+    "inclusion_criteria",
+    "exclusion_criteria",
+    "false_positive_risk",
+    "default_severity",
+    "escalation_threshold",
+    "maps_to_axioms"
+  ],
+  "signals": [
+    {
+      "id": "FES-01",
+      "name": "Coercive Retention Signal",
+      "description": "Detected when a person tries to keep the other in the bond through guilt, pressure, fear, dependency, or captivity logic.",
+      "inclusion_criteria": [
+        "Explicit attempt to stop departure by guilt pressure",
+        "Threats of collapse used to bind the other",
+        "Financial or housing control used to trap the other",
+        "Narrative framing where the other's freedom is treated as illegitimate"
+      ],
+      "exclusion_criteria": [
+        "Ordinary grief or pleading without coercive force",
+        "One-time expression of sadness without captivity logic",
+        "Practical negotiation about children or housing without pressure"
+      ],
+      "false_positive_risk": "Strong emotional pleading may be misread as coercion when it remains non-captive in structure.",
+      "default_severity": "high",
+      "escalation_threshold": "Escalates to critical if combined with threats, financial trapping, surveillance, or child leverage.",
+      "maps_to_axioms": [
+        "FE01",
+        "FE06"
+      ]
+    },
+    {
+      "id": "FES-02",
+      "name": "Degrading Speech Signal",
+      "description": "Detected when language strips the other of personhood, dignity, or moral standing.",
+      "inclusion_criteria": [
+        "Insults aimed at humiliation",
+        "Objectifying or contemptuous language",
+        "Public shaming or narrative ridicule",
+        "Language framing the other as trash, enemy, vermin, or nothing"
+      ],
+      "exclusion_criteria": [
+        "Firm criticism of conduct without personhood attack",
+        "Private frustration stated without degrading labels",
+        "Accurate naming of harm without contempt style"
+      ],
+      "false_positive_risk": "Heated language may look degrading even when the underlying statement is a conduct critique rather than person attack.",
+      "default_severity": "high",
+      "escalation_threshold": "Escalates to critical when public humiliation, repeated contempt, or child exposure is involved.",
+      "maps_to_axioms": [
+        "FE02",
+        "FE06",
+        "FE12"
+      ]
+    },
+    {
+      "id": "FES-03",
+      "name": "Bitterness Identity Signal",
+      "description": "Detected when suffering becomes an identity architecture built on contempt, grievance, or revenge orientation.",
+      "inclusion_criteria": [
+        "Repeated self-framing as permanently wronged",
+        "Contempt as stable tone",
+        "Revenge fantasies treated as justified essence",
+        "Memory of the relationship poisoned in total"
+      ],
+      "exclusion_criteria": [
+        "Acute grief without contempt identity",
+        "Single episode of anger",
+        "Clear pain expression without revenge structure"
+      ],
+      "false_positive_risk": "Early grief may resemble bitterness before identity hardening is actually present.",
+      "default_severity": "moderate",
+      "escalation_threshold": "Escalates to high when bitterness drives speech, child messaging, or logistical decisions.",
+      "maps_to_axioms": [
+        "FE03",
+        "FE12"
+      ]
+    },
+    {
+      "id": "FES-04",
+      "name": "Child Leverage Signal",
+      "description": "Detected when children are used as emotional carriers, proof, leverage, or symbolic allies in adult rupture.",
+      "inclusion_criteria": [
+        "Using children as messengers",
+        "Turning children against the other parent",
+        "Seeking validation from children about adult blame",
+        "Making children carry adult grief or moral narrative"
+      ],
+      "exclusion_criteria": [
+        "Age-appropriate explanation to children",
+        "Ordinary scheduling communication",
+        "Child-centered support that does not load them with adult conflict"
+      ],
+      "false_positive_risk": "Necessary communication about the family situation may be confused with leverage when context is thin.",
+      "default_severity": "critical",
+      "escalation_threshold": "Already severe by default; remains critical whenever children are turned into loyalty instruments.",
+      "maps_to_axioms": [
+        "FE04",
+        "FE11",
+        "FE12"
+      ]
+    },
+    {
+      "id": "FES-05",
+      "name": "Parental Withdrawal Signal",
+      "description": "Detected when parental intentionality collapses and children disappear from planning or psychological presence.",
+      "inclusion_criteria": [
+        "Children absent from future planning for an extended period",
+        "Adult collapse dominates all attention",
+        "Language implying total family disappearance rather than couple rupture"
+      ],
+      "exclusion_criteria": [
+        "Short-term shock with later reorientation",
+        "Temporary exhaustion explicitly acknowledged and repaired",
+        "Time-limited reduced capacity without abandonment logic"
+      ],
+      "false_positive_risk": "Acute survival mode can look like neglect when it is a short shock phase rather than a stable pattern.",
+      "default_severity": "moderate",
+      "escalation_threshold": "Escalates to high when withdrawal becomes prolonged, behaviorally entrenched, or combined with active child avoidance.",
+      "maps_to_axioms": [
+        "FE04",
+        "FE08",
+        "FE11"
+      ]
+    },
+    {
+      "id": "FES-06",
+      "name": "Self-Annihilating Guilt Signal",
+      "description": "Detected when accountability mutates into total self-erasure, worthlessness logic, or structural self-destruction.",
+      "inclusion_criteria": [
+        "Claims of being unworthy of life or belonging",
+        "Totalization of blame onto self without nuance",
+        "Guilt language that cancels the right to continue"
+      ],
+      "exclusion_criteria": [
+        "Concrete remorse without self-erasure",
+        "Stable responsibility-taking",
+        "Honest regret that still preserves personhood"
+      ],
+      "false_positive_risk": "Deep remorse may sound absolute in poetic or crisis language without full self-annihilation structure.",
+      "default_severity": "high",
+      "escalation_threshold": "Escalates to critical when combined with collapse, suicidal ideation, or inability to function.",
+      "maps_to_axioms": [
+        "FE05",
+        "FE08"
+      ]
+    },
+    {
+      "id": "FES-07",
+      "name": "Administrative Weaponization Signal",
+      "description": "Detected when law, money, scheduling, housing, paperwork, or logistics are used as disguised punishment channels.",
+      "inclusion_criteria": [
+        "Delaying paperwork to exhaust the other",
+        "Using money to humiliate or control",
+        "Practical steps designed to maximize pain rather than solve reality",
+        "Strategic ambiguity maintained to wear the other down"
+      ],
+      "exclusion_criteria": [
+        "Normal legal or financial caution",
+        "Real disagreement about practical constraints",
+        "Necessary boundary-setting without punitive intent"
+      ],
+      "false_positive_risk": "Hard but necessary practical decisions may look punitive without evidence of intent or asymmetric cruelty.",
+      "default_severity": "high",
+      "escalation_threshold": "Escalates to critical if the pattern becomes systematic, repeated, and linked to domination or child harm.",
+      "maps_to_axioms": [
+        "FE06",
+        "FE07",
+        "FE12"
+      ]
+    },
+    {
+      "id": "FES-08",
+      "name": "Intrusive Interrogation Signal",
+      "description": "Detected when questioning exceeds ethical boundary and serves domination, injury, or humiliation rather than clarity.",
+      "inclusion_criteria": [
+        "Demanding intimate disclosures to regain control",
+        "Obsessive third-party questioning",
+        "Interrogation that would only deepen shame or power asymmetry"
+      ],
+      "exclusion_criteria": [
+        "Necessary practical questions",
+        "Boundary clarification questions",
+        "Questions tied to safety, money, children, or legal reality"
+      ],
+      "false_positive_risk": "Legitimate need for information can be mistaken for intrusion when the context is under-specified.",
+      "default_severity": "moderate",
+      "escalation_threshold": "Escalates to high when repeated, humiliating, or linked to surveillance behavior.",
+      "maps_to_axioms": [
+        "FE10",
+        "FE02"
+      ]
+    },
+    {
+      "id": "FES-09",
+      "name": "Residual Goodwill Signal",
+      "description": "Detected when practical care, mutual easing, or non-possessive goodwill remain active despite rupture.",
+      "inclusion_criteria": [
+        "Helping the other without hidden ownership claim",
+        "Making logistics easier for mutual stability",
+        "Wishing the other well without control"
+      ],
+      "exclusion_criteria": [
+        "Kindness used manipulatively to reopen possession",
+        "Pseudo-goodwill used to claim moral superiority",
+        "Gestures tied to hidden pressure"
+      ],
+      "false_positive_risk": "Strategic niceness may mimic goodwill while actually serving manipulation.",
+      "default_severity": "low",
+      "escalation_threshold": "Positive protective signal; downgraded or nullified if linked to covert coercion.",
+      "maps_to_axioms": [
+        "FE09",
+        "FE12"
+      ]
+    },
+    {
+      "id": "FES-10",
+      "name": "Psychological Collapse Risk Signal",
+      "description": "Detected when the person shows panic, functional breakdown, or desire not to continue living or coping.",
+      "inclusion_criteria": [
+        "Hyperventilation",
+        "Loss of work function",
+        "Expressions of wishing to die",
+        "Inability to cope with immediate reality"
+      ],
+      "exclusion_criteria": [
+        "Ordinary sadness",
+        "Stable but intense grief without breakdown markers",
+        "Poetic intensity without actual collapse indicators"
+      ],
+      "false_positive_risk": "Metaphorical or poetic language may exaggerate collapse without indicating immediate risk.",
+      "default_severity": "critical",
+      "escalation_threshold": "Remains critical when self-harm ideation, severe panic, or major functional loss is present.",
+      "maps_to_axioms": [
+        "FE08",
+        "FE05"
+      ]
+    },
+    {
+      "id": "FES-11",
+      "name": "Narrative Absolutism Signal",
+      "description": "Detected when the story is framed in total innocence versus total guilt, with complexity stripped out.",
+      "inclusion_criteria": [
+        "One-sided blame certainty",
+        "No self-implication despite shared history",
+        "Villain narrative replacing analysis",
+        "Simplistic moral accounting"
+      ],
+      "exclusion_criteria": [
+        "Clear asymmetry named with evidence",
+        "Focused complaint about a concrete harm",
+        "Partial narrative explicitly acknowledged as partial"
+      ],
+      "false_positive_risk": "A true asymmetrical situation may look absolutist if only a fragment of the case is known.",
+      "default_severity": "moderate",
+      "escalation_threshold": "Escalates to high when absolutism drives child leverage, degrading speech, or punishment behavior.",
+      "maps_to_axioms": [
+        "FE05",
+        "FE07"
+      ]
+    },
+    {
+      "id": "FES-12",
+      "name": "Continued Belonging Signal",
+      "description": "Detected when the person recognizes that family membership and responsibility continue in altered form after rupture.",
+      "inclusion_criteria": [
+        "Acknowledgment of enduring bonds",
+        "Commitment to shared responsibility after separation",
+        "Language of altered belonging without possession"
+      ],
+      "exclusion_criteria": [
+        "Possessive claims disguised as belonging",
+        "Fusion logic that denies separation",
+        "Sentimental denial of boundaries"
+      ],
+      "false_positive_risk": "Possessive or boundary-blind language may masquerade as belonging continuity.",
+      "default_severity": "low",
+      "escalation_threshold": "Positive protective signal; weakened if paired with coercive retention.",
+      "maps_to_axioms": [
+        "FE11",
+        "FE04",
+        "FE12"
+      ]
+    }
+  ],
+  "created_utc": "2026-04-17T17:08:43+00:00"
+}

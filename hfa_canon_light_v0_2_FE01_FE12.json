@@ -1,0 +1,134 @@
+{
+  "schema_version": "0.2",
+  "document_id": "hfa_canon_light_v0_2_FE01_FE12",
+  "title": "Human Fracture Analysis Canon Light",
+  "status": "draft",
+  "system_name": "Human Fracture Analysis",
+  "system_type": "sta_structural_diagnostic_layer",
+  "inspiration_lineage": [
+    "Real-time human fracture material",
+    "The Three Insights",
+    "EX-TI",
+    "Systemic Truth Architecture (STA)"
+  ],
+  "architectural_position": {
+    "is_standalone": false,
+    "interoperable_with": [
+      "EX-TI",
+      "STA"
+    ],
+    "operational_purpose": "To analyze human narratives in rupture contexts and identify structural signals, risks, and dignity violations."
+  },
+  "working_definition": "Human Fracture Analysis is a structural diagnostic canon for detecting, interpreting, and reducing dehumanization, avoidable harm, and dignity failure in intimate and family rupture processes.",
+  "design_logic": {
+    "model_type": "constraint-based_structural_diagnostic_system",
+    "layers": [
+      "canon",
+      "signals",
+      "constraints",
+      "responses",
+      "runtime"
+    ],
+    "runtime_intent": "Narrative input is reduced to observable structural signals, evaluated through constraint logic, and rendered as explainable structural assessments."
+  },
+  "evaluation_output_model": {
+    "expected_outputs": [
+      "signal_hits",
+      "structural_risk_level",
+      "dignity_assessment",
+      "child_impact_assessment",
+      "narrative_bias_warning",
+      "recommended_response_level"
+    ]
+  },
+  "axioms": [
+    {
+      "id": "FE01",
+      "name": "Freedom Without Captivity",
+      "statement": "No intimate bond is ethically valid if maintained by coercion, guilt pressure, surveillance, fear, or financial captivity."
+    },
+    {
+      "id": "FE02",
+      "name": "Dignity After Love",
+      "statement": "When love ends, the human dignity of both parties must remain protected."
+    },
+    {
+      "id": "FE03",
+      "name": "Pain Is Not a License",
+      "statement": "Pain, humiliation, and grief do not create moral permission for revenge, degradation, or bitterness as identity."
+    },
+    {
+      "id": "FE04",
+      "name": "Children Remain Center",
+      "statement": "Children remain a continuing moral center after the romantic bond breaks."
+    },
+    {
+      "id": "FE05",
+      "name": "Self-Accountability Without Self-Erasure",
+      "statement": "One must examine one's own contribution to the rupture without collapsing into self-annihilation."
+    },
+    {
+      "id": "FE06",
+      "name": "No Secondary War Zone",
+      "statement": "A separation must not be converted into a secondary war zone through humiliation, threats, strategic cruelty, or moral theater."
+    },
+    {
+      "id": "FE07",
+      "name": "Reality-Bound Ethics",
+      "statement": "Structural evaluation in family rupture must include concrete realities such as money, housing, logistics, work capacity, and downstream consequences."
+    },
+    {
+      "id": "FE08",
+      "name": "Vulnerability Is Part of the Field",
+      "statement": "Breakdown, panic, shame, grief, and temporary loss of function are part of the structural field and must be interpreted with seriousness."
+    },
+    {
+      "id": "FE09",
+      "name": "Residual Goodwill Matters",
+      "statement": "Even when romantic love dies, care, mutual easing, and goodwill may remain ethically meaningful."
+    },
+    {
+      "id": "FE10",
+      "name": "Questions Have Ethical Boundaries",
+      "statement": "Not every true question is an ethical question to ask. Some questions degrade rather than clarify."
+    },
+    {
+      "id": "FE11",
+      "name": "Belonging Continues After Rupture",
+      "statement": "Family rupture does not erase all belonging. Bonds of responsibility and symbolic membership may continue."
+    },
+    {
+      "id": "FE12",
+      "name": "A Dignified Ending Minimizes Secondary Damage",
+      "statement": "The most ethical separation is not the least painful one, but the one that minimizes avoidable secondary harm."
+    }
+  ],
+  "root_risks": [
+    {
+      "id": "FER-01",
+      "name": "Narrative Absolutism",
+      "definition": "One-sided storytelling hardens into moral certainty without sufficient self-examination."
+    },
+    {
+      "id": "FER-02",
+      "name": "Child Instrumentalization",
+      "definition": "Children are turned into emotional containers, allies, proof, leverage, or compensation."
+    },
+    {
+      "id": "FER-03",
+      "name": "Dignity Collapse",
+      "definition": "One or both parties are spoken of or handled as less than fully human."
+    },
+    {
+      "id": "FER-04",
+      "name": "Administrative Cruelty",
+      "definition": "Logistics, law, or money are used as a disguised delivery system for punishment."
+    },
+    {
+      "id": "FER-05",
+      "name": "Self-Annihilating Guilt",
+      "definition": "Responsibility mutates into a total denial of one's own worth or right to continue."
+    }
+  ],
+  "created_utc": "2026-04-17T16:52:14+00:00"
+}
