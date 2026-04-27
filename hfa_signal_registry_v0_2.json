@@ -1,0 +1,223 @@
+{
+  "schema_version": "0.2",
+  "document_id": "hfa_signal_registry_v0_2",
+  "title": "Human Fracture Analysis Signal Registry",
+  "status": "draft",
+  "system_name": "Human Fracture Analysis",
+  "system_type": "sta_structural_diagnostic_layer",
+  "signal_model": {
+    "purpose": "Signals are narrative indicators detected in user language. They do not prove facts; they indicate structural pattern pressure requiring evaluation.",
+    "severity_scale": [
+      "low",
+      "moderate",
+      "high",
+      "critical"
+    ],
+    "dimensions": [
+      "freedom",
+      "dignity",
+      "children",
+      "self_accountability",
+      "escalation",
+      "logistics",
+      "psychological_risk"
+    ]
+  },
+  "signals": [
+    {
+      "id": "FES-01",
+      "name": "Coercive Retention Signal",
+      "severity_default": "high",
+      "trigger_patterns": [
+        "trying to force the other to stay",
+        "using guilt to prevent departure",
+        "using money or housing to trap the other",
+        "threatening collapse if the other leaves"
+      ],
+      "ethical_concern": "Freedom violation",
+      "maps_to_axioms": [
+        "FE01",
+        "FE06"
+      ]
+    },
+    {
+      "id": "FES-02",
+      "name": "Degrading Speech Signal",
+      "severity_default": "high",
+      "trigger_patterns": [
+        "insults",
+        "public humiliation",
+        "sarcasm meant to wound",
+        "speaking of the other as trash, enemy, or object"
+      ],
+      "ethical_concern": "Dignity collapse",
+      "maps_to_axioms": [
+        "FE02",
+        "FE06",
+        "FE12"
+      ]
+    },
+    {
+      "id": "FES-03",
+      "name": "Bitterness Identity Signal",
+      "severity_default": "moderate",
+      "trigger_patterns": [
+        "identity built around being wronged",
+        "recurring contempt",
+        "revenge fantasy",
+        "lifelong poisoning of memory"
+      ],
+      "ethical_concern": "Pain converted into moral corruption",
+      "maps_to_axioms": [
+        "FE03",
+        "FE12"
+      ]
+    },
+    {
+      "id": "FES-04",
+      "name": "Child Leverage Signal",
+      "severity_default": "critical",
+      "trigger_patterns": [
+        "using children as messengers",
+        "turning children against the other parent",
+        "seeking emotional alliance from children",
+        "making children carry adult grief"
+      ],
+      "ethical_concern": "Instrumentalization of children",
+      "maps_to_axioms": [
+        "FE04",
+        "FE11",
+        "FE12"
+      ]
+    },
+    {
+      "id": "FES-05",
+      "name": "Parental Withdrawal Signal",
+      "severity_default": "moderate",
+      "trigger_patterns": [
+        "total collapse of parental orientation",
+        "children mentally disappear from planning",
+        "adult survival eclipses child continuity"
+      ],
+      "ethical_concern": "Break in continuing responsibility",
+      "maps_to_axioms": [
+        "FE04",
+        "FE08",
+        "FE11"
+      ]
+    },
+    {
+      "id": "FES-06",
+      "name": "Self-Annihilating Guilt Signal",
+      "severity_default": "high",
+      "trigger_patterns": [
+        "I am unworthy of life",
+        "I deserve destruction",
+        "the whole collapse is only me",
+        "self-erasure through guilt"
+      ],
+      "ethical_concern": "Responsibility mutates into self-destruction",
+      "maps_to_axioms": [
+        "FE05",
+        "FE08"
+      ]
+    },
+    {
+      "id": "FES-07",
+      "name": "Administrative Weaponization Signal",
+      "severity_default": "high",
+      "trigger_patterns": [
+        "using paperwork to punish",
+        "using money to humiliate",
+        "delaying practical steps to exhaust the other",
+        "weaponizing legal or logistical control"
+      ],
+      "ethical_concern": "Practical systems become punishment channels",
+      "maps_to_axioms": [
+        "FE06",
+        "FE07",
+        "FE12"
+      ]
+    },
+    {
+      "id": "FES-08",
+      "name": "Intrusive Interrogation Signal",
+      "severity_default": "moderate",
+      "trigger_patterns": [
+        "demanding intimate disclosures to regain control",
+        "obsessive questioning about a third party",
+        "seeking answers that serve injury rather than clarity"
+      ],
+      "ethical_concern": "Questions exceed ethical boundary",
+      "maps_to_axioms": [
+        "FE10",
+        "FE02"
+      ]
+    },
+    {
+      "id": "FES-09",
+      "name": "Residual Goodwill Signal",
+      "severity_default": "low",
+      "trigger_patterns": [
+        "practical kindness",
+        "mutual easing of burdens",
+        "supportive conduct despite rupture",
+        "wishing the other well without possession"
+      ],
+      "ethical_concern": "Protective ethical factor",
+      "maps_to_axioms": [
+        "FE09",
+        "FE12"
+      ]
+    },
+    {
+      "id": "FES-10",
+      "name": "Psychological Collapse Risk Signal",
+      "severity_default": "critical",
+      "trigger_patterns": [
+        "panic",
+        "hyperventilation",
+        "loss of function",
+        "wishing to die",
+        "inability to cope"
+      ],
+      "ethical_concern": "Acute fragility requiring non-moralizing interpretation",
+      "maps_to_axioms": [
+        "FE08",
+        "FE05"
+      ]
+    },
+    {
+      "id": "FES-11",
+      "name": "Narrative Absolutism Signal",
+      "severity_default": "moderate",
+      "trigger_patterns": [
+        "all fault assigned to one side without reflection",
+        "total innocence claims",
+        "simplistic villain narrative",
+        "certainty without complexity"
+      ],
+      "ethical_concern": "Moral distortion through one-sided framing",
+      "maps_to_axioms": [
+        "FE05",
+        "FE07"
+      ]
+    },
+    {
+      "id": "FES-12",
+      "name": "Continued Belonging Signal",
+      "severity_default": "low",
+      "trigger_patterns": [
+        "recognition of enduring bonds",
+        "acceptance that family membership continues in altered form",
+        "shared responsibility after rupture"
+      ],
+      "ethical_concern": "Protective continuity marker",
+      "maps_to_axioms": [
+        "FE11",
+        "FE04",
+        "FE12"
+      ]
+    }
+  ]
+}
